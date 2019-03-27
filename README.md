@@ -1,0 +1,2 @@
+# alias
+wlias for iredmail
