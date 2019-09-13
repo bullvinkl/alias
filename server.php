@@ -39,7 +39,7 @@ if (isset($_POST['save'])) {
 	}
 else {
 		mysqli_query($db, "INSERT INTO forwardings (address, forwarding, domain, dest_domain, is_maillist, is_list, is_forwarding, is_alias, active) VALUES ('$alias', '$email', '$domain', '$dest_domain', '$is_maillist', '$is_list', '$is_forwarding', '$is_alias', '$active')");
-		mysqli_query($db, "INSERT INTO alias (address, domain, active) VALUES ('$alias', 'digimap.ru', 1)");
+		mysqli_query($db, "INSERT INTO alias (address, domain, active) VALUES ('$alias', '$domain', 1)");
 		$_SESSION['message_header'] = "Алиас добавлен";
 		$_SESSION['message'] = "Алиас: <strong>$alias</strong>@digimap.ru<br>
 		Email: <strong>$email</strong><br>";
